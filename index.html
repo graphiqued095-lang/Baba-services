@@ -3,65 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fòm Enskripsyon</title>
+<title>Enskripsyon Digital</title>
 
 <style>
 body {
-    font-family: Montserrat, sans-serif;
-    background: #ffffff;
     margin: 0;
-    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #f5f5f5);
 }
 
 .container {
     max-width: 500px;
     margin: 40px auto;
-    padding: 20px;
-    border: 2px solid #000;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 h2 {
     text-align: center;
-    color: #d40000;
+    color: #ff0000;
 }
 
 label {
-    font-weight: bold;
-    display: block;
+    font-weight: 600;
     margin-top: 10px;
+    display: block;
 }
 
 input, select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 5px;
-    border: 1px solid #000;
-    border-radius: 5px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
 }
 
-.checkbox {
-    margin-top: 15px;
+input:focus, select:focus {
+    border-color: red;
+    outline: none;
 }
 
 button {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     margin-top: 15px;
     border: none;
-    background: #d40000;
-    color: white;
+    border-radius: 8px;
     font-size: 16px;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background: #a30000;
+.submit-btn {
+    background: red;
+    color: white;
 }
 
 .whatsapp-btn {
-    background: #000;
+    background: black;
+    color: white;
+}
+
+.checkbox {
+    margin-top: 15px;
 }
 </style>
 </head>
@@ -69,7 +75,7 @@ button:hover {
 <body>
 
 <div class="container">
-    <h2>Fòm Enskripsyon</h2>
+    <h2>Enskripsyon Digital</h2>
 
     <form id="form">
 
@@ -111,25 +117,44 @@ button:hover {
             <label for="paye">Mwen peye deja</label>
         </div>
 
-        <button type="button" onclick="envoyer()">Soumèt</button>
-let url = "https://wa.me/50940052773?text=" + encodeURIComponent(message);
-        <button type="button" class="whatsapp-btn" onclick="whatsapp()">
-            Voye prèv via WhatsApp
+        <button type="button" class="submit-btn" onclick="sendWhatsApp()">
+            Voye Enskripsyon
         </button>
 
     </form>
 </div>
 
 <script>
-function envoyer() {
-    alert("Fòm nan voye avèk siksè!");
-}
+function sendWhatsApp() {
 
-function whatsapp() {
     let nom = document.getElementById("nom").value;
+    let sexe = document.getElementById("sexe").value;
+    let anne = document.getElementById("anne").value;
+    let nivo = document.getElementById("nivo").value;
+    let kod = document.getElementById("kod").value;
     let phone = document.getElementById("phone").value;
+    let method = document.getElementById("method").value;
+    let nomkont = document.getElementById("nomkont").value;
+    let numkont = document.getElementById("numkont").value;
+    let paye = document.getElementById("paye").checked ? "Wi" : "Non";
 
-    let message = `Bonjou, mwen se ${nom}. Men prèv peman mwen. Nimewo mwen: ${phone}`;
+    let message =
+`BONJOU 👋
+MEN ENFÒMASYON MWEN:
+
+👤 Non: ${nom}
+⚧ Sèks: ${sexe}
+🎂 Ane fèt: ${anne}
+🎓 Nivo: ${nivo}
+🧾 Kòd ajan: ${kod}
+
+📱 Telefòn: ${phone}
+
+💰 Metòd: ${method}
+👤 Non kont: ${nomkont}
+📲 Nimewo: ${numkont}
+
+💳 Peye deja: ${paye}`;
 
     let url = "https://wa.me/50940052773?text=" + encodeURIComponent(message);
 
