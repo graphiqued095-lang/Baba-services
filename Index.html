@@ -1,150 +1,141 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="ht">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creative Agency</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Montserrat, sans-serif;
-    }body {
-  background: #0f0f0f;
-  color: white;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fòm Enskripsyon</title>
+
+<style>
+body {
+    font-family: Montserrat, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background: #111;
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
 }
 
-header h2 {
-  color: #39ff14;
+h2 {
+    text-align: center;
+    color: #d40000;
 }
 
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
 }
 
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px;
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
 }
 
-.hero-text {
-  max-width: 500px;
+.checkbox {
+    margin-top: 15px;
 }
 
-.hero-text h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    background: #d40000;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.hero-text button {
-  padding: 10px 20px;
-  background: #39ff14;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
+button:hover {
+    background: #a30000;
 }
 
-.hero img {
-  width: 300px;
-  border-radius: 20px;
+.whatsapp-btn {
+    background: #000;
 }
-
-.stats {
-  display: flex;
-  justify-content: space-around;
-  padding: 30px;
-  background: #1a1a1a;
-  border-radius: 20px;
-  margin: 20px;
-}
-
-.section {
-  padding: 60px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #1a1a1a;
-  padding: 20px;
-  border-radius: 20px;
-}
-
-.services {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.service {
-  background: #1a1a1a;
-  padding: 20px;
-  border-radius: 15px;
-  flex: 1;
-  min-width: 200px;
-}
-
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #111;
-  margin-top: 50px;
-}
-
-  </style>
+</style>
 </head>
-<body><header>
-  <h2>Creatix</h2>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
-  </nav>
-</header><section class="hero">
-  <div class="hero-text">
-    <h1>Empowering Brands Through Creative Solutions</h1>
-    <p>We create modern and creative websites for your business.</p>
-    <button>Get Started</button>
-  </div>
-  <img src="images/hero.png" alt="hero">
-</section><div class="stats">
-  <div>2000+ Clients</div>
-  <div>10+ Years</div>
-  <div>800+ Projects</div>
-  <div>150M+ Revenue</div>
-</div><section class="section">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="service">UI/UX Design</div>
-    <div class="service">Web Development</div>
-    <div class="service">Graphic Design</div>
-    <div class="service">Motion Graphics</div>
-  </div>
-</section><section class="section">
-  <h2>Our Projects</h2>
-  <div class="cards">
-    <div class="card">Project 1</div>
-    <div class="card">Project 2</div>
-    <div class="card">Project 3</div>
-  </div>
-</section><footer>
-  <p>© 2026 Creatix - All Rights Reserved</p>
-</footer></body>
+
+<body>
+
+<div class="container">
+    <h2>Fòm Enskripsyon</h2>
+
+    <form id="form">
+
+        <label>Non Konplè</label>
+        <input type="text" id="nom" required>
+
+        <label>Sèks</label>
+        <select id="sexe">
+            <option>Gason</option>
+            <option>Fi</option>
+        </select>
+
+        <label>Ane ou fèt</label>
+        <input type="number" id="anne" required>
+
+        <label>Nivo Etid</label>
+        <input type="text" id="nivo" required>
+
+        <label>Kòd Ajan</label>
+        <input type="text" id="kod">
+
+        <label>Nimewo Telefòn</label>
+        <input type="text" id="phone" required>
+
+        <label>Mwayen pou touche kob</label>
+        <select id="method">
+            <option>Moncash</option>
+            <option>Natcash</option>
+        </select>
+
+        <label>Non sou kont lan</label>
+        <input type="text" id="nomkont" required>
+
+        <label>Nimewo pou resevwa kob</label>
+        <input type="text" id="numkont" required>
+
+        <div class="checkbox">
+            <input type="checkbox" id="paye">
+            <label for="paye">Mwen peye deja</label>
+        </div>
+
+        <button type="button" onclick="envoyer()">Soumèt</button>
+
+        <button type="button" class="whatsapp-btn" onclick="whatsapp()">
+            Voye prèv via WhatsApp
+        </button>
+
+    </form>
+</div>
+
+<script>
+function envoyer() {
+    alert("Fòm nan voye avèk siksè!");
+}
+
+function whatsapp() {
+    let nom = document.getElementById("nom").value;
+    let phone = document.getElementById("phone").value;
+
+    let message = `Bonjou, mwen se ${nom}. Men prèv peman mwen. Nimewo mwen: ${phone}`;
+
+    let url = "https://wa.me/50940052773?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
 </html>
